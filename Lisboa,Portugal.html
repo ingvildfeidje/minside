@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<form>
+		<meta charset="UTF-8">
+		<title><b>Ferietur </title></b>
+		</head>
+		<body>
+			<header>
+			<main>
+				<nav>
+					<a href="framside.html"> Framsida</a>
+					<a href="Rhodos.html"> Rhodos</a>
+					<a href="Krakow,Polen.html"> Polen</a>
+					<a href="tyskland.html"> Tyskland </a>
+				</nav>
+			</main>
+		<style>
+		main{
+			display:grid;
+			grid-template-columns: 400px
+			400px 400px 400px;
+			grid-gap:5px;
+			}
+			tbody{
+				font-family:Verdana;
+			}
+			h1{
+				font-size: 60px;
+				color:black;
+				text-shadow:4px 4px 0 #8B008B;
+				text-align: center;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+			ul li{
+				color:#8B008B;
+				font-size: 15px;
+			}
+			p{
+				font-family: Verdana;
+				color:black; 
+				font-size: 15px;
+			}
+			img{
+				border-color: darkgray;
+				margin-right: 20px;
+				margin-left:20px;
+				margin-bottom: 10px;
+				border-radius: 80%;
+				box-shadow: 15px 15px #8B008B;
+			}
+			nav{
+				text-align: center;
+				display: grid;
+				grid-gap: 20px;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				grid-column-start: 1;
+				grid-column-end: 4;
+				font-size: 25px;
+				font-family: 'Alfa Slab One', cursive;
+				font-color: black;		
+			}
+		</style>
+	<h1>Portugal</h1>
+		<p1><b> I 2015 var eg saman med mamma, pappa, bror min og tanten min til Lisboa i Portugal. Der bada vi mykje, spesielt i havet. Eine dagen sykla vi frå der vi budde, litt utanfor Lisboa inn til sentrum. Vi leigde då syklar og det var veldig fine sykkelvegar som var lett å fylgje. Vi måtte også ta ei ferje på rundt 15 min. Utanom det var vi for det meste i nærområdet til hotellet, ved bassenget, havet eller i handlegata. Ein av dei siste kveldane vi var i handlegata tok eg henna-tattovering, og den kan du sjp på eine bilete under. </b></p1>
+		<br>
+		<img style="margin:15px;"src="IMG_0883.jpg" width="350" class="rundtbilde">
+		<img style="margin:15px;"src="IMG_0954.jpg" width= "350" class="rundtbilde">
+		<img style="margin:15px;"src="IMG_0854.jpg" width="350" class="rundtbilde">
+		<br>
+		<body style="background-color:#DDA0DD;padding:">
+			<br>
+<p2> Eg anbefalar alle å reise til Lisboa då det var ein svært vakker by. Det er mykje ein kan oppleve og véret var veldig fint då vi har der vertfall. Det er supre sykkelløyper eller vegar som er tydeleg markerte, slik at ein veit kva ein driv med når ein ferdast på sykkel inn mot sentrum.  </p2>
+<br><br><br>
+<article id="txtMeldingar">
+</article>
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCVvQ8hMYWUdBS1ZQAXWakVC9cIXd9tn6s",
+    authDomain: "innlevering-9b9c2.firebaseapp.com",
+    databaseURL: "https://innlevering-9b9c2.firebaseio.com",
+    projectId: "innlevering-9b9c2",
+    storageBucket: "innlevering-9b9c2.appspot.com",
+    messagingSenderId: "601390259848"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
+let database = firebase.database();
+let meldingar = database.ref("meldingar"); 
+let nyMelding = {
+"sendar": "Trine",
+"tekst": " er det ein stad eg kan lese om Lisboa? Kunne tenkje med aa reise dit. "
+};
+</script>
+
+<script>
+meldingar.push(nyMelding);
+function visMelding(snapshot) {
+var melding = snapshot.val();
+txtMeldingar.innerHTML += `<p>
+	${melding.sendar} 
+	seier${melding.tekst}</p>`;
+}
+meldingar.on("child_added", visMelding);
+</script>
+<a href="https://no.wikipedia.org/wiki/Lisboa"> Her kan du lese meir om byen</a>
+<br><br><br><br>
+	</form>
+</body>
+</html>

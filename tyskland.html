@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<form>
+		<meta charset="UTF-8">
+		<title>Tyskland</title>
+		<link href="https://fonts.googleapis.com/css?family=Charmonman|Courgette|Dancing+Script|Permanent+Marker" rel="stylesheet">
+		</head>
+		<body>
+			<header>
+			<main>
+				<nav>
+					<a href="framside.html"> Framsida</a>
+					<a href="Lisboa,Portugal.html"> Portugal</a>
+					<a href="Krakow,Polen.html"> Polen</a>
+					<a href="Rhodos.html"> Rhodos </a>
+				</nav>
+			</main>
+		<style>
+		main{
+			display:grid;
+			grid-template-columns: 400px
+			400px 400px 400px;
+			grid-gap:5px;
+			}
+			h1{
+				font-size: 60px;
+				color:black;
+				text-shadow:4px 4px 0 #8B008B;
+				text-align: center;
+				grid-column-start:1;
+				grid-column-end:4;
+			}
+			ul li{
+				color:black;
+				font-size: 15px;
+			}
+			p{
+				font-family: Verdana;
+				color:black;
+				font-size: 30px;
+				margin-top: 70px;
+				margin-bottom: 70px;
+			}
+			img{
+				border-color: darkgray;
+				margin-right: 20px;
+				margin-left:20px;
+				margin-bottom: 40px;
+				border-radius: 80%;
+				box-shadow: 20px 20px 5px #8B008B;
+			}
+			th{
+				text-align: center;
+				padding:10px 20px;
+				border:4px solid #8B008B;
+				border-bottom:6px solid #8B008B;
+			}
+			table{
+				border-collapse: collapse;
+				margin-top: 40px;
+			}
+			thead>tr{
+				background-color: #DDA0DD;
+			}
+			tbody>tr{
+				background-color: #DDA0DD;
+			}
+			td{
+				padding:5px 10px;
+				border:4px solid #8B008B;
+			}
+			input{
+				margin-top: 40px;
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-bottom: 50px;
+			}
+			nav{
+				text-align: center;
+				display: grid;
+				grid-gap: 20px;
+				grid-template-columns:1fr 1fr 1fr 1fr;
+				grid-column-start:1;
+				grid-column-end:4;
+				font-size: 25px;
+				font-family: 'Alfa Slab One', cursive;
+				font-color: black;		
+		}
+		</style>
+		<h1>Tyskland</h1>
+		<p1>Hausten 2018 var eg på skuletur til Tyskland saman med klassen. Vi reiste frå Sogndal tidleg på morgonen og tok Kielferja frå Oslo til Kiel. Derfrå reiste vi vidare til Lübeck, nokre timar med buss. I Lübeck var det mange gamle bygningar som vi har å såg på, samt som vi også hadde ein del fritid der vi sjølv skulle finne attraksjonar. Etter to dagar i Lübeck reiste vi vidare til Berlin. Der hadde vi ein guida tur i buss, på omlag 3 timar. I berlin var det også ein del shopping. Vi tok Kielferja heim til Oslo igjen, då hadde vi vore på tur i 1 veke. </p1>
+		<br>
+		<br>
+		<body style="background-color:#DDA0DD;padding:">
+			<br><br>
+				<img style="margin:15px;"src="IMG_2167.jpg"width="350" class="rundtbilde">
+				<img style="margin:15px;"src="IMG_2220.jpg" width= "350" class="rundtbilde">	
+				<img style="margin:15px;"src="IMG_2152.jpg" width="350" class="rundtbilde">
+				<br><br><br>
+			<p2> Kvar kveld når vi kom inn på hotellet måtte vi registrere oss på eit skjema, slik at lærarane visste at alle var innkomne. I skjema under kan du registrer deg på same måte som vi gjorde.  </p2><br>
+			<footer>
+			<form action="registrer.html">
+				<input type="text"name="namn"placeholder="Kva heiter du?"required><br>
+				<label>Var du åleine når du kom inn?</label><br>
+				<input type="radio"value="nei"name="aleine"><span>nei</span>
+				<input type="radio"value="ja"name="aleine"><span>ja</span>
+				<select name="klokka"required>
+					<option value="">Kva var klokka?</option>
+					<option value="19.00">19.00</option>
+					<option value="20.00">20.00</option>
+					<option value="21.00">21.00</option>
+						<option value="22.00">22.00</option>
+						<option value="23.00">23.00</option>
+						<option value="00.00"> 00.00</option>
+					</select>
+					<button type="submit">send</button>
+				</form>
+			</footer>
+</body>
+</html>
